@@ -7,4 +7,18 @@ function sumPositive(x, y){
     return x + y;
 }
 
-console.log(sumPositive(-5, 10));
+console.log(sumPositive(5, 10));
+
+// Try / Catch block
+    // help you because it still runs your code even though there's an error. You can make sure that the rest of your code works. 
+
+function printNum(){
+    try{
+        console.log(num);
+    } catch (error) {
+        console.log(error);
+        console.log(`Num doesn't exist`)
+    }
+    
+}
+printNum()
