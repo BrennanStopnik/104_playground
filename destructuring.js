@@ -57,5 +57,65 @@ console.log(hw)
 console.log(`---------------`);
 
 
+// Getting info from the person variable with dot notation.
+let person = {
+    fullName: 'Peter Parker',
+    age: 32
+}
+let nameVar = person.fullName;
+let ageVar = person.age;
+console.log(nameVar);
+console.log(ageVar);
+
+// Destructuring way to get info from person variable.
+    // This is a way to grab properties from the big variable and make the individual variables with the info
+
+let {fullName,age} = person;
+console.log(fullName);
+console.log(age);
+console.log(`---------------`);
+
+let person2 = {
+    names: 'Peter Parker',
+    ages: 32,
+    userName: 'ppboi',
+    state: "Regret",
+    zipCode: '12345',
+    favoriteColor: 'yellow'
+}
+let person3 = {
+    names: 'Bob Barker',
+    ages: 62,
+    userName: 'ItsBobBitch',
+    state: "Confusion",
+    zipCode: '12345',
+    favoriteColor: 'green'
+}
+
+let {ages, names, userName, ...restOf} = person2;
+console.log(ages);
+console.log(names);
+console.log(userName);
+console.log(restOf);
+console.log(`---------------`);
+
+// Get the info from the object with dot notation
+    // The variables in the beginning can be whatever you want because we are inputting the specific variable in the object with dot notation syntax
+let getUserName = (names, userName) => {
+    console.log(`${names}'s username is: ${userName}`);
+}
+getUserName(person2.names, person2.userName);
+console.log(`---------------`);
+
+// Same thing but with destructuring
+    // Takes the curly backets in the variable in the beginning and looks in the specified objesct in the console.log.
+let getBobsUserName = ({names, userName}) => {
+    console.log(`${names}'s username is: ${userName}`);
+}
+getBobsUserName(person3);
+
+
+
+
 
 
