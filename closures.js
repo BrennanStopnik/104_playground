@@ -36,3 +36,32 @@ console.log(adding());
 console.log(adding());
 console.log(adding());
 console.log(adding());
+
+
+
+let b = 10;
+function test(){
+    console.log("1. " + b);
+    let b = 20;
+    console.log("2. " + b);
+};
+test();
+// Won't run because the variable was reinitialized with "let"
+
+let c = 10;
+function tester(){
+    console.log("1. " + c);
+    var c = 20;
+    console.log("2. " + c);
+};
+tester();
+// Will run after the "var" is put in. Initial console.log won't
+
+let d = 10;
+function testing(){
+    console.log("1. " + d);
+    d = 20;
+    console.log("2. " + d);
+};
+testing();
+// Will run just fine beacuse not reinitializing. 
